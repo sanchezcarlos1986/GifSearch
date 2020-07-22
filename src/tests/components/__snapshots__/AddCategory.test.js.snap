@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddCategory should renders ok 1`] = `
+<div
+  className="AddCategory"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <h2>
+      Add Category
+    </h2>
+    <input
+      onChange={[Function]}
+      placeholder="escribe algo"
+      type="text"
+      value=""
+    />
+  </form>
+</div>
+`;

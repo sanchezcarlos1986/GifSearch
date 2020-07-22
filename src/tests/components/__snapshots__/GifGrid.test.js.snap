@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GifGrid should renders items when images are loaded 1`] = `
+<div
+  className="GifGrid"
+>
+  <h3>
+    Mega Man
+  </h3>
+  <ul>
+    <GifGridItem
+      id="abc"
+      key="abc"
+      title="totoro"
+      url="https://mygif.com"
+    />
+  </ul>
+</div>
+`;
+
+exports[`GifGrid should renders ok 1`] = `
+<div
+  className="GifGrid"
+>
+  <h3>
+    Mega Man
+  </h3>
+  <p>
+    Cargando...
+  </p>
+</div>
+`;

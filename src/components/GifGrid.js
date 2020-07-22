@@ -4,15 +4,15 @@ import {useFetchGifs} from '../hooks/useFetchGifs';
 import GifGridItem from './GifGridItem';
 
 export default function GifGrid({category}) {
-  const {data, loading} = useFetchGifs(category);
+  const {data: images, loading} = useFetchGifs(category);
 
   return (
     <div className="GifGrid">
       <h3>{category}</h3>
-      {loading && 'Cargando...'}
-      {data.length > 0 && (
+      {loading && <p>Cargando...</p>}
+      {images.length > 0 && (
         <ul>
-          {data.map((img) => (
+          {images.map((img) => (
             <GifGridItem key={img.id} {...img} />
           ))}
         </ul>
@@ -22,5 +22,5 @@ export default function GifGrid({category}) {
 }
 
 GifGrid.propTypes = {
-  category: PropTypes.string,
+  category: PropTypes.string.isRequired,
 };

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GifExpertApp should renders ok 1`] = `
+<div
+  className="GifExpertApp"
+>
+  <h2>
+    GifExpertApp
+  </h2>
+  <hr />
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <ul />
+</div>
+`;
+
+exports[`GifExpertApp should shows categories list 1`] = `
+<div
+  className="GifExpertApp"
+>
+  <h2>
+    GifExpertApp
+  </h2>
+  <hr />
+  <AddCategory
+    setCategories={[Function]}
+  />
+  <ul>
+    <GifGrid
+      category="Dragon Ball"
+      key="Dragon Ball"
+    />
+    <GifGrid
+      category="Hunter X"
+      key="Hunter X"
+    />
+  </ul>
+</div>
+`;

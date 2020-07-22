@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
 export default function AddCategory({setCategories}) {
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.length > 2) {
+    if (inputValue.trim().length > 2) {
       setCategories((categories) => [inputValue, ...categories]);
       setInputValue('');
     }
@@ -17,15 +17,17 @@ export default function AddCategory({setCategories}) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add Category</h2>
-      <input
-        type="text"
-        defaultValue={inputValue}
-        onChange={handleChange}
-        placeholder="escribe algo"
-      />
-    </form>
+    <div className="AddCategory">
+      <form onSubmit={handleSubmit}>
+        <h2>Add Category</h2>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleChange}
+          placeholder="escribe algo"
+        />
+      </form>
+    </div>
   );
 }
 

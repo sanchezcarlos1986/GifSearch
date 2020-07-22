@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GifGridItem should renders ok 1`] = `
+<div
+  className="GifGridItem"
+>
+  <img
+    alt="Mega Man"
+    src="http://myurl.com"
+  />
+  <p>
+    Mega Man
+  </p>
+</div>
+`;
