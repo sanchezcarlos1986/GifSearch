@@ -10,11 +10,10 @@ import PropTypes from 'prop-types';
  */
 export default function Gif({id, url, title}) {
   return (
-    <div>
+    <a href={`#${id}`}>
       <h4>{title}</h4>
-      <small>{id}</small>
       <img src={url} alt={title} />
-    </div>
+    </a>
   );
 }
 

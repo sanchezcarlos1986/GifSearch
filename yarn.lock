@@ -11239,6 +11239,11 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
+wouter@^2.5.0:
+  version "2.5.0"
+  resolved "https://artifactoryrepo.appslatam.com/artifactory/api/npm/npm/wouter/-/wouter-2.5.0.tgz#be92c6ee5c14f9784256dc461994d6e16b2f2a35"
+  integrity sha1-vpLG7lwU+XhCVtxGGZTW4WsvKjU=
+
 wrap-ansi@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-2.1.0.tgz#d8fc3d284dd05794fe84973caecdd1cf824fdd85"
