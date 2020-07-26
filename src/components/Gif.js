@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 export default function Gif({id, url, title}) {
   return (
     <a href={`#${id}`}>
-      <h4>{title}</h4>
+      <h4>{title || 'No title ...'}</h4>
       <img src={url} alt={title} />
     </a>
   );
