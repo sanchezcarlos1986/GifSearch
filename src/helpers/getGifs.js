@@ -1,4 +1,3 @@
-/* eslint no-console: "error" */
 export const limit = 8;
 
 /**
