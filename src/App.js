@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ListOfGifs from './components/ListOfGifs';
+import {Route} from 'wouter';
 
 /**
  * App component
@@ -11,7 +12,8 @@ function App() {
   return (
     <div className="App">
       <h1>Giffy</h1>
-      <ListOfGifs category="mega man" />
+      <Route path="/gif/:keyword" component={ListOfGifs} />
+      {/* <ListOfGifs category="mega man" /> */}
     </div>
   );
 }

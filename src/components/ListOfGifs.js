@@ -7,10 +7,11 @@ import Gif from './Gif';
 /**
  * Represents a list.
  * @constructor
- * @param {array} gifs - List of gifs
+ * @param {object} params - Contains the keyword from the router's url
  */
-export default function ListOfGifs({category}) {
-  const {data, loading} = useFetchGifs(category);
+export default function ListOfGifs({params}) {
+  const {keyword} = params;
+  const {data, loading} = useFetchGifs(keyword);
 
   return (
     <div className="ListOfGifs">
@@ -28,5 +29,7 @@ export default function ListOfGifs({category}) {
 }
 
 ListOfGifs.propTypes = {
-  category: PropTypes.string.isRequired,
+  params: PropTypes.shape({
+    keyword: PropTypes.string.isRequired,
+  }),
 };

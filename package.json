@@ -46,7 +46,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"== Running Unit Tests ==\"; CI=true npm run test"
+      "pre-commit": "npm run branch-naming-check && lint-staged",
+      "post-commit": "echo \"== Running Unit Tests ==\"; CI=true npm run test"
     }
   },
   "lint-staged": {
