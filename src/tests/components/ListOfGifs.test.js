@@ -1,11 +1,11 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import GifGrid from '../../components/GifGrid';
+import ListOfGifs from '../../components/ListOfGifs';
 import {shallow} from 'enzyme';
 import {useFetchGifs} from '../../hooks/useFetchGifs';
 jest.mock('../../hooks/useFetchGifs.js');
 
-describe('GifGrid', () => {
+describe('ListOfGifs', () => {
   let props;
   let component;
 
@@ -15,11 +15,11 @@ describe('GifGrid', () => {
       loading: true,
     });
     props = {
-      category: 'Mega Man',
+      params: {keyword: 'Mega Man'},
     };
-    component = shallow(<GifGrid {...props} />);
+    component = shallow(<ListOfGifs {...props} />);
     expect(component).not.toBeNull();
-    expect(component.hasClass('GifGrid')).toBe(true);
+    expect(component.hasClass('ListOfGifs')).toBe(true);
     expect(component).toMatchSnapshot();
   });
 
@@ -37,16 +37,15 @@ describe('GifGrid', () => {
       loading: false,
     });
     props = {
-      category: 'Mega Man',
+      params: {keyword: 'Mega Man'},
     };
-    component = shallow(<GifGrid {...props} />);
+    component = shallow(<ListOfGifs {...props} />);
 
     expect(component).not.toBeNull();
-    expect(component.find('ul').exists()).toBe(true);
-    expect(component.find('GifGridItem').length).toBe(gifs.length);
-    expect(component.find('GifGridItem').prop('id')).toBe(gifs[0].id);
-    expect(component.find('GifGridItem').prop('url')).toBe(gifs[0].url);
-    expect(component.find('GifGridItem').prop('title')).toBe(gifs[0].title);
+    expect(component.find('Gif').length).toBe(gifs.length);
+    expect(component.find('Gif').prop('id')).toBe(gifs[0].id);
+    expect(component.find('Gif').prop('url')).toBe(gifs[0].url);
+    expect(component.find('Gif').prop('title')).toBe(gifs[0].title);
     expect(component).toMatchSnapshot();
   });
 });

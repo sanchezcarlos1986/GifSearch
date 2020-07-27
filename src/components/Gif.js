@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  */
 export default function Gif({id, url, title}) {
   return (
-    <Link to={`#${id}`}>
+    <Link to={`#${id}`} className="Gif">
       <h4>{title || 'No title ...'}</h4>
       <img src={url} alt={title} />
     </Link>

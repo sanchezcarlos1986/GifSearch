@@ -1,22 +1,23 @@
 import React from 'react';
-import GifGridItem from '../../components/GifGridItem';
+import Gif from '../../components/Gif';
 import {shallow} from 'enzyme';
 
-describe('GifGridItem', () => {
+describe('Gif', () => {
   let props;
   let component;
 
   beforeEach(() => {
     props = {
+      id: '123',
       title: 'Mega Man',
       url: 'http://myurl.com',
     };
-    component = shallow(<GifGridItem {...props} />);
+    component = shallow(<Gif {...props} />);
   });
 
   it('should renders ok', () => {
     expect(component).not.toBeNull();
-    expect(component.hasClass('GifGridItem')).toBe(true);
+    expect(component.hasClass('Gif')).toBe(true);
     expect(component).toMatchSnapshot();
   });
 
@@ -27,7 +28,7 @@ describe('GifGridItem', () => {
   });
 
   it('should renders the title', () => {
-    expect(component.find('p').exists()).toBe(true);
-    expect(component.find('p').text()).toBe(props.title);
+    expect(component.find('h4').exists()).toBe(true);
+    expect(component.find('h4').text()).toBe(props.title);
   });
 });

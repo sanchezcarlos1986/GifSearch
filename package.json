@@ -36,6 +36,9 @@
   },
   "devDependencies": {
     "@innocells/branch-naming-check": "^1.0.0",
+    "@testing-library/react-hooks": "^3.4.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "6.5.1",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",

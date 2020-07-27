@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListOfGifs should renders items when images are loaded 1`] = `ShallowWrapper {}`;
+
+exports[`ListOfGifs should renders ok 1`] = `ShallowWrapper {}`;
