@@ -50,7 +50,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run branch-naming-check && lint-staged",
-      "post-commit": "echo \"== Running Unit Tests ==\"; CI=true npm run test"
+      "post-push": "echo \"== Running Unit Tests ==\"; CI=true npm run test"
     }
   },
   "lint-staged": {
