@@ -13,7 +13,6 @@ function App() {
     <div className="App">
       <h1>Giffy</h1>
       <Route path="/gif/:keyword" component={ListOfGifs} />
-      {/* <ListOfGifs category="mega man" /> */}
     </div>
   );
 }

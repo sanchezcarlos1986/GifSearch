@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'wouter';
 import PropTypes from 'prop-types';
 
 /**
@@ -10,10 +11,10 @@ import PropTypes from 'prop-types';
  */
 export default function Gif({id, url, title}) {
   return (
-    <a href={`#${id}`}>
+    <Link to={`#${id}`}>
       <h4>{title || 'No title ...'}</h4>
       <img src={url} alt={title} />
-    </a>
+    </Link>
   );
 }
 

@@ -9,8 +9,7 @@ import Gif from './Gif';
  * @constructor
  * @param {object} params - Contains the keyword from the router's url
  */
-export default function ListOfGifs({params}) {
-  const {keyword} = params;
+export default function ListOfGifs({params: {keyword}}) {
   const {data, loading} = useFetchGifs(keyword);
 
   return (
