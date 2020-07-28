@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Link} from 'wouter';
 import PropTypes from 'prop-types';
 
@@ -9,9 +9,9 @@ import PropTypes from 'prop-types';
  * @param {string} url - Gif's url
  * @param {string} title - Gif's title
  */
-export default function Gif({id, url, title}) {
+function Gif({id, url, title}) {
   return (
-    <Link to={`#${id}`} className="Gif">
+    <Link to={`/gif/${id}`} className="Gif">
       <h4>{title || 'No title ...'}</h4>
       <img src={url} alt={title} />
     </Link>
@@ -23,3 +23,5 @@ Gif.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
+
+export default memo(Gif);

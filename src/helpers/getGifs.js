@@ -5,7 +5,7 @@ export const limit = 8;
  * @constructor
  * @param {string} category - Category to search
  */
-export const getGifs = async category => {
+const getGifs = async category => {
   try {
     const apiKey = '1YST8FDtdIB5qC8fDVGwNW8V2olj2b92';
     const baseURL = `http://api.giphy.com/v1/gifs/search?q=${encodeURI(
@@ -29,3 +29,5 @@ export const getGifs = async category => {
     return err;
   }
 };
+
+export default getGifs;

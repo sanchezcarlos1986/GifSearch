@@ -16,8 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "npm run test -- --coverage --watchAll",
     "eject": "react-scripts eject",
-    "branch-naming-check": "branch-naming-check \"^(master|develop)|(feature|bugfix|refactor|ci|hotfix|jira|issue|renovate)/[a-zA-Z0-9._-]+$\""
+    "branch-naming-check": "branch-naming-check \"^(master|develop)|(feature|bugfix|refactor|ci|hotfix|jira|issue|renovate)/[a-zA-Z0-9._-]+$\"",
+    "postinstall": "link-module-alias"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,5 +60,27 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!**/index.js",
+      "!**/node_modules/**",
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "_moduleAliases": {
+    "~root": ".",
+    "~hooks": "src/hooks/",
+    "~helpers": "src/helpers/",
+    "~components": "src/components/",
+    "~pages": "src/pages/"
   }
 }

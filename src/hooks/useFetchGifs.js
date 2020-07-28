@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react';
-import {getGifs} from '../helpers/getGifs';
+import {getGifs} from '~helpers';
 
 /**
  * Represents a useEffect statement
  * @constructor
  * @param {string} category - Category to search and set data
  */
-export const useFetchGifs = category => {
+const useFetchGifs = category => {
   const [state, setState] = useState({
     data: [],
     loading: true,
@@ -23,3 +23,5 @@ export const useFetchGifs = category => {
 
   return state; // {data: [], loading: true}
 };
+
+export default useFetchGifs;
