@@ -1,5 +1,5 @@
 import {renderHook} from '@testing-library/react-hooks';
-const {useFetchGifs} = require('../../hooks/useFetchGifs');
+import {useFetchGifs} from '~hooks';
 
 describe('useFetchGifs hook', () => {
   test('should shows default values', async () => {
